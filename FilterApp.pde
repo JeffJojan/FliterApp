@@ -124,7 +124,6 @@ void draw()
     
     /***** Effects Code *****/
 
-    /* This sample grayscale code may serve as an example */
     if (Grayscale)
     {
       int i = picStart;
@@ -134,8 +133,8 @@ void draw()
         float gray = (red(c)+green(c)+blue(c))/3.0;  //average the RGB colors
         pixels[i] = color(gray, gray, gray);
         i = i + 1;
-        if (i % width >= picWidth)        // This will ignore anything on the line that 
-          i = i + width - picWidth;       // after the image (such as buttons)
+        if (i % width >= picWidth)       
+          i = i + width - picWidth;       
       }   
     }
 
@@ -149,8 +148,8 @@ void draw()
         pixels[i] = color(255 - red(c), 255 - green(c), 255 - blue(c));
         
         i = i + 1;
-        if (i % width >= picWidth)        // This will ignore anything on the line that 
-            i = i + width - picWidth;       // after the image (such as buttons)
+        if (i % width >= picWidth)        
+            i = i + width - picWidth;       
       }
     }
 
@@ -168,8 +167,8 @@ void draw()
         pixels[i] = newColor;                   //store the new color  
         
         i = i + 1;
-        if (i % width >= picWidth)        // This will ignore anything on the line that 
-            i = i + width - picWidth;       // after the image (such as buttons)
+        if (i % width >= picWidth)       
+            i = i + width - picWidth;      
       }
     }
     
@@ -192,8 +191,8 @@ void draw()
         pixels[location] = newColor;
         location = location + 1;     //next pixel!
     
-        if (location % width >= picWidth)        // This will ignore anything on the line that
-          location =location+width-picWidth;    // after the image (such as buttons)              
+        if (location % width >= picWidth)       
+          location =location+width-picWidth;            
      }
     }
     
@@ -212,8 +211,6 @@ void mouseClicked()
 
 void mousePressed()
 {
-  //The following define the clickable bounding boxes for any buttons used.
-  //Note that these boundaries should match those drawn in the draw() function.
   
   if (mouseX>660 && mouseX<790 && mouseY>50 && mouseY<90)
   {
